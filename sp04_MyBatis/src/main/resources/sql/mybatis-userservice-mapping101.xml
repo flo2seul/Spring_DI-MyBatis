@@ -10,15 +10,8 @@
 	5. ResultMap
 	6. LIKE 연산자와 와일드카드(%, _) :: ~mapping02.xml 참고하기 바람
  -->
-<mapper namespace="User10">
-	<resultMap type="user" id="userSelectRM">
-		<result property="userId" column="user_id"/>
-		<result property="userName" column="user_name"/>
-		<result property="password" column="password"/>
-		<result property="age" column="age"/>
-		<result property="grade" column="grade"/>
-		<result property="regDate" column="reg_date"/>
-	</resultMap>
+<mapper namespace="User101">
+
 	
 	<!-- SQL구문의 재사용 -->
 	<sql id="select-users">
@@ -54,13 +47,13 @@
 	</delete>
 	
 	<!-- 정적 쿼리 -->
-	<select id="getUser" resultMap="userSelectRM" parameterType="string"> <!-- SELECT문, 컬럼명과 필드명이 다름에도 불구하고 ALIAS 사용 안했음  -->
+	<select id="getUser" resultType="user" parameterType="string"> <!-- SELECT문, 컬럼명과 필드명이 다름에도 불구하고 ALIAS 사용 안했음  -->
 		<include refid="select-users"></include>
 		WHERE user_id=#{userId}
 	</select>
 	
 	<!-- 동적 쿼리 -->
-	<select id="getUserList" parameterType="user" resultMap="userSelectRM">
+	<select id="getUserList" parameterType="user" resultType="user">
 		<include refid="select-users"/>
 		<where>
 			<if test="userName !=null">

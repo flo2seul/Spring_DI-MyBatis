@@ -21,7 +21,7 @@ public class TestUtil {
 	}
 	
 	public static SqlSessionFactory getSqlSessionFactory() throws IOException{
-		Reader reader = Resources.getResourceAsReader("config/SqlMapConfig.xml");
+		Reader reader = Resources.getResourceAsReader("config/SqlMapConfig01.xml");
 		
 		SqlSessionFactory factory=new SqlSessionFactoryBuilder().build(reader);
 		return factory;

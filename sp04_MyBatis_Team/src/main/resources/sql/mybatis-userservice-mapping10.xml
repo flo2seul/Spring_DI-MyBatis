@@ -57,13 +57,13 @@
 	</delete>
 	
 	<!-- 정적 쿼리 -->
-	<select id="getBook" resultMap="bookSelectRM" parameterType="book"> <!-- SELECT문, 컬럼명과 필드명이 다름에도 불구하고 ALIAS 사용 안했음  -->
+	<select id="getBook" resultMap="bookSelectRM" parameterType="string"> <!-- SELECT문, 컬럼명과 필드명이 다름에도 불구하고 ALIAS 사용 안했음  -->
 		<include refid="select-book"></include>
 		WHERE isbn=#{isbn}
 	</select>
 	
 	<!-- 동적 쿼리 -->
-	<select id="getbookList" parameterType="book" resultMap="bookSelectRM">
+	<select id="getBookList" parameterType="book" resultMap="bookSelectRM">
 		<include refid="select-book"/>
 		<where>
 			<if test="title !=null">
