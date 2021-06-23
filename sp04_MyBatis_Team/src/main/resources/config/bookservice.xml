@@ -28,14 +28,5 @@
 	</bean>
 	<!-- ibatis.services.user.impl 해당 패키지 하위에 있는 컴포넌트들을 일일이 확인해보고 빈을 생성하라...-->
 	<context:component-scan base-package="com.encore.services.impl"></context:component-scan>
-		<!-- 4. DAOImpl12 사용자 정의 Bean -->
-	<bean id= "bookDAOImpl" class="com.encore.servies.impl.BookDAOImpl">
-		<property name="sqlSession" ref="sqlSession"></property>
-	</bean>
-	
-	<!-- 5. ServiceImpl12 사용자정의 Bean -->
-	<bean id="bookServiceImpl" class="com.encore.servies.impl.BookServiceImpl">
-		<property name="bookDAO" ref="bookDAOImpl"></property>
-	
-	</bean>
+
 </beans>

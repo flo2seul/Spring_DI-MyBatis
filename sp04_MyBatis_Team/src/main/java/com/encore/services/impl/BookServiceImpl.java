@@ -1,4 +1,4 @@
-package com.encore.servies.impl;
+package com.encore.services.impl;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.encore.mybatis.vo.Book;
-import com.encore.servies.BookDAO;
-import com.encore.servies.BookService;
+import com.encore.services.BookDAO;
+import com.encore.services.BookService;
 
 
 @Service

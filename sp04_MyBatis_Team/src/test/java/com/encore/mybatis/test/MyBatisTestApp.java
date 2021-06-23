@@ -8,8 +8,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.encore.mybatis.vo.Book;
-import com.encore.servies.BookDAO;
-import com.encore.servies.BookService;
+import com.encore.services.BookDAO;
+import com.encore.services.BookService;
+import com.encore.services.impl.BookDAOImpl;
+import com.encore.services.impl.BookServiceImpl;
 
 public class MyBatisTestApp {
 	

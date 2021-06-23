@@ -1,4 +1,4 @@
-package com.encore.servies;
+package com.encore.services;
 
 import java.util.List;
 
